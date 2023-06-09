@@ -8,16 +8,16 @@ This repository is for an experiment of inlined pointers.
 goos: darwin
 goarch: arm64
 pkg: github.com/YukiBobier/experiment-inlined-pointer
-BenchmarkPrintFoo-10            15016969                79.77 ns/op            0 B/op          0 allocs/op
-BenchmarkPrintFooPointer-10     15988239                74.67 ns/op            0 B/op          0 allocs/op
+BenchmarkPrintFoo-10               46504             24772 ns/op               0 B/op          0 allocs/op
+BenchmarkPrintFooPointer-10        48526             24812 ns/op               0 B/op          0 allocs/op
 PASS
-ok      github.com/YukiBobier/experiment-inlined-pointer        3.814s
+ok      github.com/YukiBobier/experiment-inlined-pointer        3.176s
 ##### Benchmarking without inlining... #####
 goos: darwin
 goarch: arm64
 pkg: github.com/YukiBobier/experiment-inlined-pointer
-BenchmarkPrintFoo-10            12429102                97.24 ns/op            0 B/op          0 allocs/op
-BenchmarkPrintFooPointer-10      7213098               147.8 ns/op          1024 B/op          1 allocs/op
+BenchmarkPrintFoo-10               44491             26120 ns/op               0 B/op          0 allocs/op
+BenchmarkPrintFooPointer-10        45529             26380 ns/op           65536 B/op          1 allocs/op
 PASS
-ok      github.com/YukiBobier/experiment-inlined-pointer        3.776s
+ok      github.com/YukiBobier/experiment-inlined-pointer        3.129s
 ```
