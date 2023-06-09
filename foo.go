@@ -1,19 +1,19 @@
 package foo
 
 type foo struct {
-	a [64]int64
-	b [64]int64
+	a [1024]int8
+	b [1024 * 63]int8
 }
 
 func getFoo() foo {
-	var a [64]int64
-	var b [64]int64
+	var a [1024]int8
+	var b [1024 * 63]int8
 	return foo{a, b}
 }
 
 func getFooPointer() *foo {
-	var a [64]int64
-	var b [64]int64
+	var a [1024]int8
+	var b [1024 * 63]int8
 	return &foo{a, b}
 }
 
